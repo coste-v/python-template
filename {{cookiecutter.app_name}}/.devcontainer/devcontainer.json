@@ -1,0 +1,27 @@
+{
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": ".."
+	},
+
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.flake8Enabled": true,
+		"python.linting.lintOnSave": true,
+		"python.testing.pytestEnabled": true,
+		"python.testing.pytestArgs": ["tests"],
+		"python.linting.flake8Path": "/usr/local/bin/flake8",
+		"python.formatting.blackPath": "/usr/local/bin/black",
+	},
+
+	"extensions": [
+		"ms-python.python",
+		"dorzey.vscode-sqlfluff",
+	],
+
+	"runArgs": [
+		"--env-file", ".env"
+	],
+}
