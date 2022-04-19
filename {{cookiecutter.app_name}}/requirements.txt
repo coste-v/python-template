@@ -1,4 +1,0 @@
-pytest==6.2.3
-flake8==3.9.1
-black==21.4b2
-sqlfluff==0.5.2

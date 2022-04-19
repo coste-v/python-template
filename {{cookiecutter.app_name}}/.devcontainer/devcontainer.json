@@ -2,7 +2,8 @@
 	"name": "Python 3",
 	"build": {
 		"dockerfile": "../Dockerfile",
-		"context": ".."
+		"context": "..",
+		"args": {"ENV": "dev"}
 	},
 
 	"settings": { 
@@ -24,4 +25,12 @@
 	"runArgs": [
 		"--env-file", ".env"
 	],
+
+	"containerEnv": {
+		"AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
+		"AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}"
+	},
+
+	"workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
+	"workspaceFolder": "/app",
 }
