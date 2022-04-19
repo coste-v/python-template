@@ -1,3 +1,4 @@
 {
-    "app_name": "my-new-app"
+    "app_name": "my-new-app",
+    "gitlab_namespace": "vcoste"
 }

@@ -1,0 +1,21 @@
+# pyproject.toml
+
+[tool.poetry]
+name = "{{ cookiecutter.app_name }}"
+version = "0.1.0"
+description = ""
+authors = ["Virgile"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+black      = "^22.3"
+isort      = "^5.10"
+pytest     = "^6.2"
+pytest-cov = "^3.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.1.11"]
+build-backend = "poetry.core.masonry.api"
