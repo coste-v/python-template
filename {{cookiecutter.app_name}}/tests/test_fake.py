@@ -1,4 +1,4 @@
-from src.fake import fake
+from {{cookiecutter.app_name}}.fake import fake
 
 
 def test_fake():

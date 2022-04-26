@@ -6,8 +6,7 @@
 		"args": {"ENV": "dev"}
 	},
 
-	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash",
+	"settings": {
 		"python.pythonPath": "/usr/local/bin/python",
 		"python.linting.flake8Enabled": true,
 		"python.linting.lintOnSave": true,
@@ -33,4 +32,6 @@
 
 	"workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
 	"workspaceFolder": "/app",
+
+	"postCreateCommand": "poetry install"
 }

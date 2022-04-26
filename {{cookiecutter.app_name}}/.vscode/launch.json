@@ -5,14 +5,16 @@
             "name": "Main",
             "type": "python",
             "request": "launch",
-            "module": "main"
+            "module": "{{cookiecutter.app_name}}",
+            "justMyCode": false
         },
         {
             "name": "Tests",
             "type": "python",
             "request": "launch",
             "module": "pytest",
-            //"args": ["tests/test_first.py"]
+            "justMyCode": false
+            //"args": ["tests/test_fake.py"]
         },
     ]
 }
