@@ -1,20 +1,12 @@
-FROM python:3.9
+FROM python:3.12-slim
 
 ARG ENV
-#ARG USERNAME=virgilecoste
-#ARG USER_UID=1000
-#ARG USER_GID=$USER_UID
-
-#RUN groupadd --gid $USER_GID $USERNAME \
-#    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
-
-#USER $USERNAME
 
 COPY . /app
 WORKDIR /app
 
 RUN pip install --upgrade pip && \
-    pip install poetry==1.1.11 && \ 
+    pip install poetry==1.8.3 && \ 
     poetry config virtualenvs.create false
 
 RUN if [ "${ENV}" = "dev" ] ; then poetry install ; else poetry install --no-dev ; fi
